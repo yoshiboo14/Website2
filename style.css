@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", "sans-serif";
+  /*  */
   box-sizing: border-box;
 }
 
@@ -15,7 +16,9 @@ body {
   height: 100vh;
   /* 背景に画像を表示 */
   background-image: url(images/background.png);
+  /*  */
   background-size: cover;
+  /*  */
   background-position: center;
 }
 
@@ -28,6 +31,7 @@ nav {
   /* 上下中央寄せ */
   align-items: center;
   justify-content: space-between;
+  /*  */
   flex-wrap: wrap;
 }
 
@@ -38,6 +42,7 @@ nav {
 nav ul li {
   /* リストを横並び */
   display: inline-block;
+  /*  */
   list-style: none;
   margin: 10px 20px;
 }
@@ -174,6 +179,7 @@ flex-basisプロパティが優先される。 */
   padding: 30px 0;
 }
 
+/*  */
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -240,6 +246,7 @@ flex-basisプロパティが優先される。 */
 .layer {
   width: 100%;
   height: 0%;
+  /* グラデーション */
   background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
   border-radius: 10px;
   /*  */
@@ -251,6 +258,7 @@ flex-basisプロパティが優先される。 */
   display: flex;
   align-items: center;
   justify-content: center;
+  /*  */
   flex-direction: column;
   padding: 0 40px;
   text-align: center;
@@ -299,4 +307,75 @@ flex-basisプロパティが優先される。 */
 
 .btn:hover {
   background-color: red;
+}
+
+/* -----------------------------------contact---------------------------------------- */
+.contact-left {
+  /* container内での割合 */
+  flex-basis: 35%;
+}
+
+.contact-right {
+  /* container内での割合 */
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: red;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  /* 横並びのブロック要素 */
+  display: inline-block;
+  /* ホバー時 */
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: red;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background-color: red;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  /* outline 名前や電話番号、お問い合わせ内容などを書く際に入力中であることを示す時に使用されることが多い */
+  /* 入力欄がフォーカスされた時に周りの線を表示させる(デフォルトでついている機能) */
+  outline: none;
+  background-color: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2 {
+  padding: 14px, 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
 }
