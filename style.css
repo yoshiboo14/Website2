@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* aタグにそれぞれidをつけて以下を記述するとスクロールができる */
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: black;
   color: white;
